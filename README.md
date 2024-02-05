@@ -1,5 +1,5 @@
 # CSVALL
-## Video Demo:  <URL HERE>
+## Video Demo:  https://youtu.be/TScolN-I9Uw
 ## Short Description:
 This is my final CS50P project
 It is a command line program, which grabs n csv files and returns a single csv file with the unique products and adds two new columns of prices calculated with a polynomial regression.
@@ -27,26 +27,25 @@ In case of not saying yes, no or exit, an error is raised, the user is told to s
     
 In case of saying "no" it will enter a second while loop where now the user will be asked for the names of the .csv that he wants to read.
 
-        in case of saying "exit" it will raise an error and exit the application
+in case of saying "exit" it will raise an error and exit the application
 
-        in case of writing a file that does not end in .csv it will raise an error, it will tell the user that it is not a .csv and ask him again for a .csv
+in case of writing a file that does not end in .csv it will raise an error, it will tell the user that it is not a .csv and ask him again for a .csv
 
-        and in case it doesn't pass the possible errors it will read the csv with pandas and then add it to the dataframes variable.
+and in case it doesn't pass the possible errors it will read the csv with pandas and then add it to the dataframes variable.
         
-        then it will ask the user if he wants to add another csv, I did this in a way that you can add n csv numbers.
+then it will ask the user if he wants to add another csv, I did this in a way that you can add n csv numbers.
 
-            the answer goes to another function answer_function(), I did this because it was getting too big and had too many nested loops.
+the answer goes to another function answer_function(), I did this because it was getting too big and had too many nested loops.
             
-            In case the user says "exit" it exits the application.
+In case the user says "exit" it exits the application.
             
-            In case the user says "yes" a break is made to exit the third while loop and start again the second while loop, where it will ask the user for a csv name.
+In case the user says "yes" a break is made to exit the third while loop and start again the second while loop, where it will ask the user for a csv name.
 
-            in case he doesn't answer "yes", "no" or "exit" deneuvo will ask the user for the name of a csv, while it keeps an error counter, when it reaches 5 it exits the application.
+in case he doesn't answer "yes", "no" or "exit" deneuvo will ask the user for the name of a csv, while it keeps an error counter, when it reaches 5 it exits the application.
 
-            In case of saying "no" it returns True to flag_exit leaving the third loop and the second loop at the same time and return the dataframes leaving the first loop.
+In case of saying "no" it returns True to flag_exit leaving the third loop and the second loop at the same time and return the dataframes leaving the first loop.
 
 ### DF_AIO = pd.concat(dataframes)
-
 This takes the dataframe data which is a list and converts it into a pandas DataFrame.
 
 ### DF_AIO = delete_duplicates_and_sort(DF_AIO)
@@ -58,7 +57,6 @@ Then sort by "name" and "watts" to have an order and return the DataFrame sorted
 
 
 ### DF_AIO = add_prices(DF_AIO)
-
 This function generates two new columns, which are the column "price_with_increase" which is equal to the column "precio" after applying the function "calculate_price_with_increase" and the second one is "price_with_increase2" which is equal to the column "price_with_increase" after applying the function "calculate_price_with_increase".
 and the second one is "price_with_increase2" which is equal to the column "price_with_increase" after applying the function "calculate_price_with_increase".
 
